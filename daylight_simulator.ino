@@ -1,16 +1,16 @@
 // ---------- INCLUDES ---------- //
 #include "color.h"
+#include "realtime.h"
 
 
 void setup() {
   Serial.begin(9600);
-  color.SETUP(9,11,10);
+  color.SETUP(9, 10, 11);
+  realtime.SETUP();
 }
 
 void loop() {
-  for (int i = 2200; i < 8640; i++) {
-
-    color.setLedBasedOnTime(i);
-    delay(100);
-  }
+  int utime = realtime.getUniqueTimestamp();
+  color.setLedBasedOnTime(utime);
+  delay(500);
 }

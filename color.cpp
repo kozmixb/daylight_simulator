@@ -105,7 +105,7 @@ void cclass::setLedBasedOnTime(int utimestamp)
 
   Serial.print(utimestamp);
   Serial.print(": ");
-  cclass::setColor(red, green, blue);
+  cclass::setColor();
 }
 
 void cclass::setColor() {
