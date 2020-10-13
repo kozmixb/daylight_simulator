@@ -29,7 +29,7 @@ byte redPin;
 byte greenPin;
 byte bluePin;
 
-const byte nightLED[] = {0, 32, 50};
+const byte nightLED[] = {0, 0, 0};
 const byte sunLED[]   = {255, 157, 64};
 const byte dayLED[]   = {255, 255, 164};
 
@@ -42,7 +42,7 @@ const int dawnBegin     = 2880; // 08:00
 const int dayBegin      = 3240; // 09:00
 const int sunsetBegin   = 6840; // 19:00
 const int duskBegin     = 7200; // 20:00
-const int nightBegin    = 7560; // 21:00
+const int nightBegin    = 7920; // 22:00
 
 cclass::cclass() {
 }
