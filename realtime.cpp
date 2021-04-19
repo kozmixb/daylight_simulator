@@ -20,6 +20,11 @@ int rclass::getUniqueTimestamp()
   byte minute = Clock.getMinute();
   byte second = Clock.getSecond();
 
+  Serial.print(hour);
+  Serial.print(':');
+  Serial.print(minute);
+  Serial.print(':');
+  Serial.println(second);
   int result = (hour *360) + (minute * 6) + (second / 10);
   return result;
 }
